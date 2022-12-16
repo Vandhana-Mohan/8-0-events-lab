@@ -8,7 +8,7 @@ for (let i = 0; i < 100; i++) {
 
 // You may write your code here!
 
-//const selectAPalette = document.querySelector('#palette div').style.background
+
 document.querySelectorAll('#palette div').forEach(div => {
   div.addEventListener('click',selectColor => {
     document.querySelector('#current-color').style.background = selectColor.target.style.background;
