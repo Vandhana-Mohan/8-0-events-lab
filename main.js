@@ -38,7 +38,7 @@ fill.addEventListener('click',handleClick => {
 })
 
 let erase = document.querySelector('.erase');
-let singleCell = document.querySelectorAll('.cell')
+let singleCell = document.querySelector('.cell')
 erase.addEventListener('click',handleClick => {
   singleCell.style.background = 'white'
   })
