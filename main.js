@@ -8,15 +8,39 @@ for (let i = 0; i < 100; i++) {
 
 // You may write your code here!
 
-
-document.querySelectorAll('#palette div').forEach(div => {
-  div.addEventListener('click',selectColor => {
-    document.querySelector('#current-color').style.background = selectColor.target.style.background;
+let currentColor = document.getElementById('current-color');
+let colors = document.querySelectorAll('.color')
+colors.forEach(color => {
+  color.addEventListener('click',handleClick => {
+    currentColor.style.background = handleClick.target.style.background;
   })
 })
 
-document.querySelectorAll('.cell').forEach(cell => {
-  cell.addEventListener('click', selectCell => {
-    selectCell.target.style.background = document.querySelector('#current-color').style.background
+let cells = document.querySelectorAll('.cell')
+cells.forEach(cell => {
+  cell.addEventListener('click', handleClick => {
+    cell.style.background = currentColor.style.background
+  })
+})
+
+let resetButton = document.querySelector('.reset');
+resetButton.addEventListener('click',handleClick => {
+  cells.forEach(cell => {
+    cell.style.background = 'white'
+  })
+})
+
+let fill = document.querySelector('.fill');
+fill.addEventListener('click',handleClick => {
+  cells.forEach(cell => {
+    cell.style.background = currentColor.style.background
+  })
+})
+
+let erase = document.querySelector('.erase');
+let singleCell = document.querySelectorAll('.cell')
+erase.addEventListener('click',handleClick => {
+  singleCell.forEach(cell => {
+    cell.style.background = 'white'
   })
 })
