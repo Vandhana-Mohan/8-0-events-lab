@@ -80,3 +80,18 @@ button, .reset {
   font-weight:bold;
   font-family:cursive;
 }
+
+.container{
+  width: 200px;
+}
+
+.buttons{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mainContainer{
+  display:flex;
+  flex-direction: row;
+}
